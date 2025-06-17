@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人首頁 - 王彥傑</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- 頭像與歡迎語 -->
+  <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md text-center">
+    <img src="OIP.jpeg" alt="個人頭像" class="w-24 h-24 mx-auto rounded-full border-4 border-white shadow -mt-16">    <h2 class="text-xl font-semibold mt-4">王彥傑</h2>
+    <p class="text-sm text-gray-500">電子工程愛好者 | 未來工程師</p>
+
+    <!-- 按鈕區 -->
+    <div class="mt-4 flex justify-center space-x-2 flex-wrap">
+      <button onclick="showSection('intro')" class="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">關於我</button>
+      <button onclick="showSection('skills')" class="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">技能</button>
+      <button onclick="showSection('contact')" class="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">聯絡方式</button>
+      <button onclick="showSection('certificate')" class="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300">擁有證照</button>
+    </div>
+  </div>
+
+  <!-- 區塊內容 -->
+  <div class="max-w-md mx-auto mt-6 space-y-4">
+    <section id="intro" class="content-section active p-4 bg-white rounded-xl shadow">
+      <h2 class="font-bold text-lg mb-2">關於我</h2>
+      <p>　　你好，我是王彥傑，目前就讀於成大南工高職資訊科，是一位熱愛動手實作與探索電路原理的學生。從進入電子科以來，我對電路設計、模擬與修復產生了濃厚興趣，尤其喜歡使用麵包板、模擬軟體來驗證理論。</p>
+      <p>　　在課堂上，我積極學習電子學與實習操作，也考取了多張與電子相關的證照，例如工業電子丙級與數位電子乙級。這些學習讓我對電子工程的基礎打下了穩固根基，也激發我繼續深入探索的動力。</p>
+      <p>　　未來我希望能進一步就讀電子工程相關科系，挑戰更進階的設計與創新應用，朝著成為一位具備實作與研發能力的電子工程師邁進。</p>
+    </section>
+
+    <section id="skills" class="content-section hidden p-4 bg-white rounded-xl shadow">
+      <h2 class="font-bold text-lg mb-2">技能</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Python / JavaScript / HTML / CSS</li>
+        <li>電子電路設計與模擬</li>
+        <li>使用 Tinkercad、LTspice、Proteus 等工具</li>
+        <li>Git / GitHub 基礎</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="content-section hidden p-4 bg-white rounded-xl shadow">
+      <h2 class="font-bold text-lg mb-2">聯絡方式</h2>
+      <p>Email：andy102346@gmail.com</p>
+      <p>GitHub：<a href="https://github.com/wanyanjie1" target="_blank" class="text-blue-500 hover:underline">andy102346</a></p>
+    </section>
+
+    <section id="certificate" class="content-section hidden p-4 bg-white rounded-xl shadow">
+      <h2 class="font-bold text-lg mb-2">擁有證照</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>工業電子丙級</li>
+        <li>電腦軟體應用丙級</li>
+        <li>電腦硬體裝修丙級</li>
+        <li>數位電子乙級</li>
+      </ul>
+    </section>
+
+    <!-- 額外區塊：學習任務與會議 -->
+    <section class="p-4 bg-white rounded-xl shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="font-bold text-lg">學習任務</h3>
+          <p class="text-sm text-gray-500">目前進度 5/ 10</p>
+        </div>
+        <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-xl">📘</div>
+      </div>
+      <div class="w-full bg-gray-200 h-2 rounded-full mt-2">
+        <div class="bg-pink-500 h-2 rounded-full" style="width: 50%;"></div>
+      </div>
+    </section>
+
+    <section class="p-4 bg-white rounded-xl shadow"> 
+        <div>
+         <a href="https://www.youtube.com/@ATGXicefires/featured" target="_blank" class="block p-4 bg-gray-100 rounded-xl shadow hover:bg-gray-200 transition text-center">
+        <h3 class="font-bold text-lg">ATGXicefires</h3>
+        <p class="text-sm text-gray-500">點我前往 YT</p>我推薦他的影片</p></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.classList.add('hidden');
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.remove('hidden');
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
